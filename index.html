@@ -1,0 +1,71 @@
+<html>
+<head>
+<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+</head>
+<body>
+<div class="container"> 
+	<h2>Sonic Paging</h2>
+
+	<div id="nav" class="pagination"></div>
+	<line>line</line>
+	<div id="nav1" class="pagination"></div>
+
+	<line></line>
+	<div id="nav2" class="pagination"></div>
+
+	<line></line>
+	<div id="nav3" class="pagination"></div>
+
+</div>
+
+<script type="text/javascript" src="sonicpaging.js"></script>
+<script type="text/javascript">
+var nav = new SonicPaging({
+	appendTo:'nav', 
+	currentPage:10,
+	prevText: "<-",
+	nextText: "->",
+
+	isShowFirst: 	false,
+	isShowLast: 	false
+
+});
+
+var nav1 = new SonicPaging({
+	appendTo:'nav1', 
+	currentPage:1,
+	prevText: "<<",
+	nextText: ">>",
+
+});
+
+var nav2 = new SonicPaging({
+	appendTo:'nav2', 
+	currentPage:6,
+	prevText: "prev",
+	nextText: "next",
+	totalPages: 100, 
+
+});
+
+var nav3 = new SonicPaging({
+	appendTo:'nav3', 
+	currentPage:50,
+	prevText: "prev",
+	nextText: "next",
+	totalPages: 100, 
+	ulClass: 	"not-SonicPaging",
+	liClass: 	"SonicPaging-li",
+	linkClass: 	"SonicPaging-link", 
+	maxDispPages: 	6,
+	pagesBefore: 	3,
+	pagesAfter: 	2,
+	dataAttName: "onclick",
+	dataAttValue: "alert(\"page = {#}\")", 
+
+});
+
+</script>
+</body>
+
+</html>
